@@ -9,7 +9,7 @@ A Simple Calculator App for Android made during Calc Challenge
 * [Beanshell](http://www.beanshell.org/) - A small, free, embeddable java source interpreter
 
 
-## Try Now
+## Try it on your device
 
  [Download APK Now](https://github.com/thedevelopersanjeev/Calculator/blob/master/app-debug.apk)
 
