@@ -11,7 +11,7 @@ A Simple Calculator App for Android made during Calc Challenge
 
 ## Try it on your device
 
- [Download APK Now](https://github.com/thedevelopersanjeev/Calculator/blob/master/app-debug.apk)
+* [Download APK Now](https://github.com/thedevelopersanjeev/Calculator/blob/master/app-debug.apk)
 
 ## Contributing
 
