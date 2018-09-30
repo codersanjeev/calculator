@@ -11,3 +11,7 @@ A Simple Calculator App for Android made during Calc Challenge
 ## Contributing
 
 Pull requests are welcomed
+
+## Author
+
+* **Sanjeev** - [thedevelopersanjeev](https://github.com/thedevelopersanjeev)
