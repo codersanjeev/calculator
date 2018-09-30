@@ -8,9 +8,14 @@ A Simple Calculator App for Android made during Calc Challenge
 * [Kotlin](https://kotlinlang.org/) - A programming language
 * [Beanshell](http://www.beanshell.org/) - A small, free, embeddable java source interpreter
 
+
+## Try Now
+
+ [Download APK Now](https://github.com/thedevelopersanjeev/Calculator/blob/master/app-debug.apk)
+
 ## Contributing
 
-Pull requests are welcomed
+* Pull requests are welcomed
 
 ## Author
 
