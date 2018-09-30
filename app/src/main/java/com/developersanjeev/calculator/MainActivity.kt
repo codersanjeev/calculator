@@ -12,35 +12,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button_one.setOnClickListener(numButtonClickListener)
-        button_two.setOnClickListener(numButtonClickListener)
-        button_three.setOnClickListener(numButtonClickListener)
-        button_four.setOnClickListener(numButtonClickListener)
-        button_five.setOnClickListener(numButtonClickListener)
-        button_six.setOnClickListener(numButtonClickListener)
-        button_seven.setOnClickListener(numButtonClickListener)
-        button_eight.setOnClickListener(numButtonClickListener)
-        button_nine.setOnClickListener(numButtonClickListener)
-        button_zero.setOnClickListener(numButtonClickListener)
-        button_clear.setOnClickListener(numButtonClickListener)
-        button_change_sign.setOnClickListener(numButtonClickListener)
-        button_plus.setOnClickListener(numButtonClickListener)
-        button_minus.setOnClickListener(numButtonClickListener)
-        button_multiply.setOnClickListener(numButtonClickListener)
-        button_divide.setOnClickListener(numButtonClickListener)
-        button_change_sign.setOnClickListener(numButtonClickListener)
-        button_dot.setOnClickListener(numButtonClickListener)
-        button_percentage.setOnClickListener(numButtonClickListener)
-        button_equals.setOnClickListener(numButtonClickListener)
+        // set on click listener for every button
+        button_one.setOnClickListener(buttonClickListener)
+        button_two.setOnClickListener(buttonClickListener)
+        button_three.setOnClickListener(buttonClickListener)
+        button_four.setOnClickListener(buttonClickListener)
+        button_five.setOnClickListener(buttonClickListener)
+        button_six.setOnClickListener(buttonClickListener)
+        button_seven.setOnClickListener(buttonClickListener)
+        button_eight.setOnClickListener(buttonClickListener)
+        button_nine.setOnClickListener(buttonClickListener)
+        button_zero.setOnClickListener(buttonClickListener)
+        button_clear.setOnClickListener(buttonClickListener)
+        button_change_sign.setOnClickListener(buttonClickListener)
+        button_plus.setOnClickListener(buttonClickListener)
+        button_minus.setOnClickListener(buttonClickListener)
+        button_multiply.setOnClickListener(buttonClickListener)
+        button_divide.setOnClickListener(buttonClickListener)
+        button_change_sign.setOnClickListener(buttonClickListener)
+        button_dot.setOnClickListener(buttonClickListener)
+        button_percentage.setOnClickListener(buttonClickListener)
+        button_equals.setOnClickListener(buttonClickListener)
 
     }
 
-    private val numButtonClickListener = View.OnClickListener { view ->
+    private val buttonClickListener = View.OnClickListener { view ->
         when(view.id){
 
+            // Button one is clicked
             R.id.button_one -> {
+                // get current string from display
                 val str:String = display_view.text.toString()
                 if(str == "0"){
+                    // display 1 instead of 01
                     display_view.text = "1"
                 }
                 else {
@@ -48,6 +52,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button two is clicked
             R.id.button_two -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -58,6 +63,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button three is clicked
             R.id.button_three -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -68,6 +74,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button four is clicked
             R.id.button_four -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -78,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button five is clicked
             R.id.button_five -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -88,6 +96,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button six is clicked
             R.id.button_six -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -98,6 +107,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button seven is clicked
             R.id.button_seven -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -108,6 +118,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button eight is clicked
             R.id.button_eight -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -118,6 +129,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button nine is clicked
             R.id.button_nine -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -128,6 +140,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button zero is clicked
             R.id.button_zero -> {
                 val str:String = display_view.text.toString()
                 if(str == "0"){
@@ -138,67 +151,80 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button clear is clicked
             R.id.button_clear -> {
                 display_view.text = "0"
             }
 
+            // Button plus is clicked
             R.id.button_plus -> {
                 val str:String = display_view.text.toString()
-                if(!(str.endsWith("+") || str.endsWith("-") ||
-                        str.endsWith("x") || str.endsWith("/"))){
+                // checks if there is already an operator in the end
+                if(ExpressionEvaluator.checkValidity(str)){
                     display_view.text = str + "+"
                 }
             }
 
+            // Button minus is clicked
             R.id.button_minus -> {
                 val str:String = display_view.text.toString()
-                if(!(str.endsWith("+") || str.endsWith("-") ||
-                                str.endsWith("x") || str.endsWith("/"))){
+                if(ExpressionEvaluator.checkValidity(str)){
                     display_view.text = str + "-"
                 }
             }
 
+            // Button multiply is clicked
             R.id.button_multiply -> {
                 val str:String = display_view.text.toString()
-                if(!(str.endsWith("+") || str.endsWith("-") ||
-                                str.endsWith("x") || str.endsWith("/"))){
+                if(ExpressionEvaluator.checkValidity(str)){
                     display_view.text = str + "x"
                 }
             }
 
+            // Button divide is clicked
             R.id.button_divide -> {
                 val str:String = display_view.text.toString()
-                if(!(str.endsWith("+") || str.endsWith("-") ||
-                                str.endsWith("x") || str.endsWith("/"))){
+                if(ExpressionEvaluator.checkValidity(str)){
                     display_view.text = str + "/"
                 }
             }
 
+            // Button change sign is clicked
             R.id.button_change_sign -> {
                 val str:String = display_view.text.toString()
                 if(ExpressionEvaluator.checkValidity(str)){
                     try {
+                        // evaluate the current expression
+                        // multiply it by (-1) to change the sign
                         val x = Integer.parseInt(ExpressionEvaluator.evaluateExpression(str).toString())
                         display_view.text = (-1*x).toString()
                     }
                     catch (error:EvalError){
-                        // do nothing
+                        // do nothing as expression can't be evaluated
                     }
                 }
             }
 
+            // Button dot is clicked
             R.id.button_dot -> {
                 val str:String = display_view.text.toString()
+                // if condition to check the validity of expression
+                // as dot can't come after '+', '-', 'x', '/' or '.'
                 if(!(str.endsWith("+") || str.endsWith("-")
                                 || str.endsWith("x") || str.endsWith("/") || str.endsWith("."))){
                     display_view.text = str + "."
                 }
             }
 
+            // Button percentage is clicked
             R.id.button_percentage -> {
                 val str:String = display_view.text.toString()
+                // first check the validity of expression
                 if(ExpressionEvaluator.checkValidity(str)){
                     try{
+                        // evaluate the current expression
+                        // divide it by 100.0 to find percent
+                        // again evaluate it
                         display_view.text = ExpressionEvaluator.evaluateExpression(
                                 ExpressionEvaluator.evaluateExpression(str).toString() + "/100.0")
                                 .toString()
@@ -209,8 +235,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Button equals is clicked
             R.id.button_equals -> {
                 val str:String = display_view.text.toString()
+                // Simply check the validity and evaluate the expression
                 if(ExpressionEvaluator.checkValidity(str)){
                     try {
                         display_view.text = ExpressionEvaluator.evaluateExpression(str).toString()

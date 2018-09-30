@@ -16,7 +16,7 @@
 
             xmlns:android="http://schemas.android.com/apk/res/android">
 
-            <solid android:color="#9f9f9f"
+            <solid android:color="#000000"
                 />
 
             <corners
