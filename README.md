@@ -1,7 +1,7 @@
 # Calculator
 A Simple Calculator App for Android made during Calc Challenge 
 
-<img src=https://raw.githubusercontent.com/thedevelopersanjeev/Calculator/master/screenshots.jpeg />
+<img src=https://user-images.githubusercontent.com/20669217/47609653-6ae66600-da60-11e8-9ca8-f3bfc0d0f0e9.png />
 
 ## Built with
 
